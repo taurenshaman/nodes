@@ -1,5 +1,4 @@
 ﻿{
-  "disabled": false,
   "bindings": [
     {
       "authLevel": "anonymous",
@@ -8,9 +7,10 @@
       "direction": "in"
     },
     {
-      "name": "res",
+      "name": "$return",
       "type": "http",
       "direction": "out"
     }
-  ]
+  ],
+  "disabled": false
 }
