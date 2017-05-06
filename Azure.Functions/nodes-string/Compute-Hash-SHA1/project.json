@@ -1,0 +1,9 @@
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "PCLCrypto": "2.0.147"
+      }
+    }
+   }
+}
