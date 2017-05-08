@@ -23,7 +23,7 @@ using System.Net;
     /// </summary>
     const long Quintillion = 1000000000000000000;
 
-    // ¨C9,223,372,036,854,775,808 µ½ 9,223,372,036,854,775,807
+    // 9,223,372,036,854,775,808-9,223,372,036,854,775,807
     static string LongToEnglish(long x) {
       if (x < 0)
         return "Negative " + LongToEnglish( x * -1L );
@@ -147,13 +147,10 @@ using System.Net;
         }
         cnt++;
       }
-      if (output[output.Length - 1] == ' ') { // "Three Thousand " == > "Three Thousand"
-        return output.Substring( 0, output.Length - 1 );
-      }
-      return ( output );
+      return ( output.Trim() );
     }
 
-    // 0 µ½ 18,446,744,073,709,551,615
+    // 0-18,446,744,073,709,551,615
     static string LongToEnglish(ulong x) {
       switch (x) {
         case 0: return "Zero";
