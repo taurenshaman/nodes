@@ -23,7 +23,7 @@ using System.Net;
     /// </summary>
     const long Quintillion = 1000000000000000000;
 
-    // ¨C9,223,372,036,854,775,808 µ½ 9,223,372,036,854,775,807
+    // Â¨C9,223,372,036,854,775,808 ÂµÂ½ 9,223,372,036,854,775,807
     static string LongToEnglish(long x) {
       if (x < 0)
         return "Negative " + LongToEnglish( x * -1L );
@@ -153,7 +153,7 @@ using System.Net;
       return ( output );
     }
 
-    // 0 µ½ 18,446,744,073,709,551,615
+    // 0 ÂµÂ½ 18,446,744,073,709,551,615
     static string LongToEnglish(ulong x) {
       switch (x) {
         case 0: return "Zero";
@@ -274,10 +274,7 @@ using System.Net;
         }
         cnt++;
       }
-      if (output[output.Length - 1] == ' ') { // "Three Thousand " == > "Three Thousand"
-        return output.Substring( 0, output.Length - 1 );
-      }
-      return ( output );
+      return ( output.Trim() );
     }
 
     public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log) {
